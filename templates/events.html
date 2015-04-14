@@ -1,0 +1,5 @@
+<template name="events">
+    {{#each raceevents}}
+        <a href="/events/{{name}}/{{date.getFullYear}}">{{name}} {{date.getFullYear}}</a>
+    {{/each}}
+</template>
