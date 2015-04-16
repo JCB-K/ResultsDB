@@ -1,6 +1,19 @@
 <template name="raceEvent">
     <h1>{{name}} {{date.getFullYear}}</h1>
     {{#each races}}
-        <p>{{raceClass}}</p>
+        <h2>{{raceClass}}</h2>
+        <table>
+            {{#each results}}
+                {{> result}}
+            {{/each}}
+        </table>
     {{/each}}
+</template>
+
+<template name="result">
+    <tr>
+        <td>{{position}}</td>
+        <td>{{rider.firstName}} {{rider.lastName}}</td>
+        <td>{{parseSeconds time}}</td>
+    </tr>
 </template>
